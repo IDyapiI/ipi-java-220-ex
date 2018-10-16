@@ -31,12 +31,12 @@ public class EntrepriseTest {
 		//calculant la prime de base pour tous les employés de l'entreprise de la manière suivante :
 		//Utiliser la classe LocalDate pour obtenir l'année courante.
 		//
-		//Prime = 50% de l'année en cours. Ex : 2017 : 2017 / 2 = 1008.5
+		//Prime = 50% de l'année en cours. Ex : 2017 : 2017 / 2 = 1009.0
 
 		TestUtils.checkStaticMethod("Entreprise", "primeAnnuelleBase", TestUtils.DOUBLE, 0);
 
 		Object resultat = TestUtils.callMethod("Entreprise", "primeAnnuelleBase");
-		Assertions.assertThat(resultat).isEqualTo(1008.5);
+		Assertions.assertThat(resultat).isEqualTo(1009.0);
 
 		DateTimeUtils.setCurrentMillisFixed(0L);
 
